@@ -28,12 +28,16 @@ type Endereco = {
     estado: string
 }
 
-type NovoCarrinho = {
-    item: Item,
-    qtd: number,
-    desconto: number,
-    frete: number,
-    tipoTransacao: Lowercase<'credito' | 'debito'>,
-    cartao: Cartao,
+// type NovoCarrinho = {
+//     item: Item,
+//     qtd: number,
+//     desconto: number,
+//     frete: number,
+//     tipoTransacao: Lowercase<'credito' | 'debito'>,
+//     cartao: Cartao,
+//     endereco: Endereco
+// }
+
+type NovoCarrinho = Carrinho & {
     endereco: Endereco
 }
